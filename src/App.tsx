@@ -10,13 +10,20 @@ import Home from "./components/pages/Home";
 import PaymentPop from "./components/layout/PaymentPop";
 import Header from "./components/layout/Header";
 import Navbar from "./components/layout/Navbar";
+import Background from "./components/pages/Background";
+import PrivacyPolicy from "./components/pages/PrivacyPolicy";
+import TermsOfService from "./components/pages/TermsOfService";
+import ContactUs from "./components/pages/ContactUs";
+import RateUs from "./components/pages/RateUs";
 
-// 
+//
 function App() {
   // States
   // Windows Notification Permission
-  const [notificationPermission, setNotificationPermission] = useState<boolean | null>(() => {
-    const stored = localStorage.getItem('notificationPermission');
+  const [notificationPermission, setNotificationPermission] = useState<
+    boolean | null
+  >(() => {
+    const stored = localStorage.getItem("notificationPermission");
     return stored ? JSON.parse(stored) : null;
   });
   // Nav Expanded
@@ -24,7 +31,7 @@ function App() {
   // Selected Tab
   const [selectedTab, setSelectedTab] = useState<string>("home");
   // Payment Option Pop State
-  const [isPaymentPop, setIsPaymentPop] = useState<boolean>(true);
+  const [isPaymentPop, setIsPaymentPop] = useState<boolean>(false);
 
   // Effect
   // Check for notification permission
@@ -32,18 +39,21 @@ function App() {
     async function checkPermission() {
       if (notificationPermission === null) {
         const ask = await requestPermission();
-        setNotificationPermission(ask === 'granted');
+        setNotificationPermission(ask === "granted");
       }
     }
 
     checkPermission();
-  }, [notificationPermission])
-  // Save 
+  }, [notificationPermission]);
+  // Save
   useEffect(() => {
     if (notificationPermission !== null) {
-      localStorage.setItem('notificationPermission', JSON.stringify(notificationPermission));
+      localStorage.setItem(
+        "notificationPermission",
+        JSON.stringify(notificationPermission),
+      );
     }
-  }, [notificationPermission])
+  }, [notificationPermission]);
 
   return (
     <section className="relative">
@@ -53,18 +63,35 @@ function App() {
       {isPaymentPop && <PaymentPop setIsPaymentPop={setIsPaymentPop} />}
 
       {/*  */}
-      <Header isExpnadedNav={isExpnadedNav} setIsExpandedNav={setIsExpandedNav} />
+      <Header
+        isExpnadedNav={isExpnadedNav}
+        setIsExpandedNav={setIsExpandedNav}
+      />
 
       {/*  */}
-      <Navbar isExpnadedNav={isExpnadedNav} selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
+      <Navbar
+        isExpnadedNav={isExpnadedNav}
+        selectedTab={selectedTab}
+        setSelectedTab={setSelectedTab}
+      />
 
       {/*  */}
-      <main className={`mt-16 ${isExpnadedNav ? 'ml-[22%]' : 'ml-16'}`}>
+      <main className={`mt-16 ${isExpnadedNav ? "ml-[22%]" : "ml-16"}`}>
         {/* Home */}
-        {selectedTab === 'home' && <Home notificationPermission={notificationPermission} />}
-
+        {selectedTab === "home" && (
+          <Home notificationPermission={notificationPermission} />
+        )}
+        {/* Background */}
+        {selectedTab === "background" && <Background />}
+        {/* Privacy Policy */}
+        {selectedTab === "privacy-policy" && <PrivacyPolicy />}
+        {/* Terms Of Service */}
+        {selectedTab === "terms-of-service" && <TermsOfService />}
+        {/* Contact Us */}
+        {selectedTab === "contact-us" && <ContactUs />}
+        {/* Contact Us */}
+        {selectedTab === "rate-us" && <RateUs />}
       </main>
-
     </section>
   );
 }

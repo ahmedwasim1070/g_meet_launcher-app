@@ -41,4 +41,4 @@ Click the button below to download the latest production installer for Windows:
 
 ---
 
-&copy; 2026 Ahmed Wasim. All rights reserved.
+&copy; 2026 ahmedwasim1070. All rights reserved.

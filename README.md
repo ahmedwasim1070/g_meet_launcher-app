@@ -12,7 +12,7 @@ Click the button below to download the latest production installer for Windows:
 
 [![Download for Windows](https://img.shields.io/badge/Download-Windows__MSI-blue?style=for-the-badge&logo=windows)](https://github.com/ahmedwasim1070/g_meet_launcher-app/releases/download/v0.1.0/gmeet-manager-app_0.1.0_x64_en-US.msi)
 
-> 💡 **Note for Beta Users:** If Windows SmartScreen shows a warning during installation, click _“More Info”_ and then _“Run Anyway”_. This occurs because the beta binary is not yet code-signed with an EV Certificate.
+> 💡 **Note for Pre-Release Users:** If Windows SmartScreen shows a warning during installation, click _“More Info”_ and then _“Run Anyway”_. This occurs because the beta binary is not yet code-signed with an EV Certificate.
 
 ---
 

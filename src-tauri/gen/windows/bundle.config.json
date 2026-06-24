@@ -1,0 +1,20 @@
+{
+  "publisher": "CN=3462EF1E-6157-41BC-941F-AA5998327B51",
+  "publisherDisplayName": "ideaforge",
+  "capabilities": {
+    "general": ["internetClient"]
+  },
+  "extensions": {
+    "shareTarget": false,
+    "fileAssociations": [],
+    "protocolHandlers": []
+  },
+  "signing": {
+    "pfx": null,
+    "pfxPassword": null
+  },
+  "resourceIndex": {
+    "enabled": false,
+    "keepConfig": false
+  }
+}

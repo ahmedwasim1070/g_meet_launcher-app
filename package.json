@@ -1,13 +1,15 @@
 {
-  "name": "gmeet-manager-app",
+  "name": "app-for-google-meet",
+  "author": "ideaforge",
   "private": true,
-  "version": "0.1.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "tauri": "tauri"
+    "tauri": "tauri",
+    "tauri:windows:build": "tauri-windows-bundle build"
   },
   "dependencies": {
     "@tauri-apps/plugin-clipboard-manager": "^2.3.0",
@@ -19,6 +21,7 @@
     "react-hot-toast": "^2.6.0"
   },
   "devDependencies": {
+    "@choochmeque/tauri-windows-bundle": "^0.1.26",
     "@tailwindcss/vite": "^4.3.1",
     "@tauri-apps/cli": "^2.8.4",
     "@types/react": "^19.1.8",

@@ -1,16 +1,11 @@
 [package]
-name = "gmeet-manager-app"
-version = "0.1.0"
-description = "A Tauri App"
-authors = ["you"]
+name = "app-for-google-meet"
+version = "1.0.0"
+description = "Lightweight desktop utility designed to streamline Google Meet access, scheduling, and session management. It removes browser overhead by providing a direct, native experience for launching and organizing meetings efficiently."
+authors = ["ahmedwasim1070"]
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [lib]
-# The `_lib` suffix may seem redundant but it is necessary
-# to make the lib name unique and wouldn't conflict with the bin name.
-# This seems to be only an issue on Windows, see https://github.com/rust-lang/cargo/issues/8519
 name = "gmeet_manager_app_lib"
 crate-type = ["staticlib", "cdylib", "rlib"]
 

@@ -1,8 +1,8 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "gmeet-manager-app",
-  "version": "0.1.0",
-  "identifier": "com.ahmedwasim1070.gmeet-manager-app",
+  "productName": "App for Google Meet",
+  "version": "1.0.0",
+  "identifier": "ideaforge.AppforGoogleMeet",
   "build": {
     "beforeDevCommand": "npm run dev",
     "devUrl": "http://localhost:1420",
@@ -12,18 +12,24 @@
   "app": {
     "windows": [
       {
-        "title": "Google Meet Launcher",
+        "title": "App for Google Meet",
         "width": 1000,
         "height": 800
       }
     ],
     "security": {
-      "csp": null
+      "csp": "default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
     }
   },
   "bundle": {
+    "publisher": "CN=3462EF1E-6157-41BC-941F-AA5998327B51",
     "active": true,
-    "targets": "all",
+    "targets": ["msix"],
+    "windows": {
+      "webviewInstallMode": {
+        "type": "offlineInstaller"
+      }
+    },
     "icon": [
       "icons/32x32.png",
       "icons/128x128.png",

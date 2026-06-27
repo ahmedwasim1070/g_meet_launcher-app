@@ -1,6 +1,6 @@
-# App for Google Meet
+# G-Meet Desktop Launcher
 
-**Package Name:** `ideaforge.AppforGoogleMeet`
+**Package Name:** `ideaforge.G-MeetDesktopLauncher`
 
 A lightweight desktop utility designed to streamline Google Meet access, scheduling, and session management. It removes browser overhead by providing a direct, native experience for launching and organizing meetings efficiently.
 
@@ -8,9 +8,9 @@ A lightweight desktop utility designed to streamline Google Meet access, schedul
 
 ## 🌐 Live Deployment
 
-| Environment    | Status        | Access                                                                 |
-| :------------- | :------------ | :--------------------------------------------------------------------- |
-| **Production** | 🟢 **Online** | [**Microsoft Store**](https://apps.microsoft.com/detail/71yy5j1t6mzf2) |
+| Environment    | Status        | Access                                                                |
+| :------------- | :------------ | :-------------------------------------------------------------------- |
+| **Production** | 🟢 **Online** | [**Microsoft Store**](https://apps.microsoft.com/detail/9PHKS01R0C0B) |
 
 ---
 

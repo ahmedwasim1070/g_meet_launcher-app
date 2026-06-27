@@ -1,12 +1,12 @@
 [package]
-name = "app-for-google-meet"
+name = "gmeet-desktop-launcher"
 version = "1.0.0"
 description = "Lightweight desktop utility designed to streamline Google Meet access, scheduling, and session management. It removes browser overhead by providing a direct, native experience for launching and organizing meetings efficiently."
-authors = ["ahmedwasim1070"]
+authors = ["ideaforge"]
 edition = "2021"
 
 [lib]
-name = "gmeet_manager_app_lib"
+name = "gmeet_desktop_launcher_lib"
 crate-type = ["staticlib", "cdylib", "rlib"]
 
 [build-dependencies]
@@ -21,5 +21,5 @@ tauri-plugin-clipboard-manager = "2"
 tauri-plugin-notification = "2"
 
 [[bin]]
-name = "AppforGoogleMeet"
+name = "G-MeetDesktopLauncher"
 path = "src/main.rs"
